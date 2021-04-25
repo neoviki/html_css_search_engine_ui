@@ -12,6 +12,8 @@ image_str = 'content: url('+image+');';
 search_results = document.getElementById("search-results");
 outer_box = document.createElement("div");
 outer_box.classList.add('search-result-box');
+image_box = document.createElement("div");
+image_box.classList.add('search-result-image-box');
 image = document.createElement("div");
 image.classList.add('search-result-image');
 
@@ -30,8 +32,8 @@ div_details.innerHTML = trim_string(details, 250);
 
 inner_box.appendChild(div_title);
 inner_box.appendChild(div_details);
-
-outer_box.appendChild(image);
+image_box.appendChild(image);
+outer_box.appendChild(image_box);
 outer_box.appendChild(inner_box);
 search_results.appendChild(outer_box);
 }
